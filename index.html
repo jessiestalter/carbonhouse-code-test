@@ -1,9 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Example</title>
+        <meta charset="UTF-8" />  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />   
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Carbonhouse Code Test</title>
     </head>
     <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
+        <nav class="navBar">
+            <div id="logoImageDiv">
+                <img src="./images/Logo.png" alt="CH Venue Logo" id="logoImage">
+            </div>
+            <div class="upperNavBar">
+                <p class="connectedText">GET CONNECTED</p>
+                <ul class="socialLinks">
+                    <li class="socialLink"><a href="#">
+                        <img src="./images/Instagram.png" alt="Instagram Icon">
+                    </a></li>
+                    <li class="socialLink"><a href="#">
+                        <img src="./images/Twitter.png" alt="Twitter Icon">
+                    </a></li>
+                    <li class="socialLink"><a href="#">
+                        <img src="./images/Facebook.png" alt="Facebook Icon">
+                    </a></li>
+                    <li class="socialLink"><a href="#">
+                        <img src="./images/Youtube.png" alt="Youtube Icon">
+                    </a></li>
+                </ul>
+                <div class="searchBar">
+                   <input type="text" class="search" placeholder="SEARCH EVENTS">
+                   <button type="submit" class="searchButton">
+                     <i class="fa fa-search"></i>
+                   </button>
+                </div>
+                <div class="loginDiv">
+                    <p class="loginText">LOGIN</p>
+                    <img class="loginIcon" src="./images/loginIcon.png" alt="Login Icon">
+                </div>
+            </div>
+            <div class="lowerNavBar">
+                <ul class="navLinks">
+                    <li class="navLink"><a href="#">TICKETS</a></li>
+                    <li class="navLink"><a href="#">PLAN YOUR VISIT</a></li>
+                    <li class="navLink"><a href="#">VIP MEMBERS</a></li>
+                    <li class="navLink"><a href="#">ABOUT US</a></li>
+                </ul>
+                <button class="hamburgerButton"><img src="./images/Hamburger.png" class="hamburgerIcon"></button>
+            </div>
+            <div class="bars">
+              <i class="fa fa-bars"></i>
+            </div>
+        </nav>
     </body>
 </html>

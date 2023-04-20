@@ -1,0 +1,154 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Oswald:wght@400;500;600;700&display=swap");
+/* COLORS */
+/* NAV BAR STYLES */
+.navBar {
+  display: flex;
+  flex-direction: column;
+}
+
+#logoImageDiv {
+  position: absolute;
+}
+
+#logoImageDiv {
+  left: 30px;
+  top: 15px;
+}
+#logoImageDiv #logoImage {
+  height: 90px;
+}
+
+.upperNavBar {
+  height: 40px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+.upperNavBar .connectedText {
+  font-family: "Oswald", sans-serif;
+  color: #de53f3;
+}
+.upperNavBar .socialLinks {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upperNavBar .socialLinks .socialLink {
+  padding: 0 8px;
+  list-style-type: none;
+}
+.upperNavBar .socialLinks .socialLink a {
+  text-decoration: none;
+}
+.upperNavBar .searchBar {
+  position: relative;
+  display: flex;
+  width: 375px;
+  margin-left: 35px;
+  margin-right: 0;
+}
+.upperNavBar .searchBar .search {
+  width: 100%;
+  border-radius: 40px;
+  border: none;
+  padding: 5px;
+  background-color: #E1E1E1;
+  outline: none;
+  color: #9DBFAF;
+}
+.upperNavBar .searchBar .search:focus {
+  color: #000000;
+}
+.upperNavBar .searchBar .searchButton {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: #000000;
+}
+.upperNavBar .loginDiv {
+  display: flex;
+  background-color: #de53f3;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.upperNavBar .loginDiv .loginText {
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  margin-left: 25px;
+}
+.upperNavBar .loginDiv .loginIcon {
+  margin-right: 35px;
+}
+
+.lowerNavBar {
+  height: 80px;
+  width: 100vw;
+  background-color: #000000;
+}
+.lowerNavBar .navLinks {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.lowerNavBar .navLinks .navLink {
+  padding: 28px 5% 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  height: 100%;
+}
+.lowerNavBar .navLinks .navLink a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+.lowerNavBar .navLinks .navLink:hover {
+  background-color: #2e2e2e;
+}
+.lowerNavBar .hamburgerButton {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+  .upperNavBar .searchBar {
+    width: 275px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 960px) {
+  #logoImageDiv {
+    left: 5px;
+    top: 5px;
+  }
+  #logoImageDiv #logoImage {
+    height: 70px;
+  }
+  .upperNavBar {
+    display: none;
+  }
+  .lowerNavBar .navLinks {
+    display: none;
+  }
+  .lowerNavBar .hamburgerButton {
+    display: block;
+  }
+}
+/* MAIN STYLES */
+body {
+  margin: 0;
+}/*# sourceMappingURL=main.css.map */

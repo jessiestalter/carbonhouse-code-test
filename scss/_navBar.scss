@@ -1,0 +1,174 @@
+/* NAV BAR STYLES */
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+}
+
+#logoImageDiv {
+    position: absolute;
+}
+
+#logoImageDiv {
+    left: 30px;
+    top: 15px;
+
+    #logoImage {
+        height: 90px;
+    }
+}
+
+.upperNavBar {
+    height: 40px;
+    background-color: $default-white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+
+    .connectedText {
+        font-family: $oswald-font-family;
+        color: $chvenue-pink;
+    }
+
+    .socialLinks {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .socialLink {
+            padding: 0 8px;
+            list-style-type: none;
+    
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .searchBar {
+      position: relative;
+      display: flex;
+      width: 375px;
+      margin-left: 35px;
+      margin-right: 0;
+    
+      .search {
+        width: 100%;
+        border-radius: 40px;
+        border: none;
+        padding: 5px;
+        background-color: #E1E1E1;
+        outline: none;
+        color: #9DBFAF;
+      }
+    
+      .search:focus{
+        color: $default-black;
+      }
+    
+      .searchButton {
+        cursor: pointer;
+        background: rgba(0,0,0,0);
+        border: none;
+        color: $default-black;
+      }
+    }
+
+    .loginDiv {
+        display: flex;
+        background-color: $chvenue-pink;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .loginText {
+            color: $default-white;
+            font-family: $oswald-font-family;
+            margin-left: 25px;
+        }
+
+        .loginIcon {
+            margin-right: 35px;
+        }
+    }
+}
+
+.lowerNavBar {
+    height: 80px;
+    width: 100vw;
+    background-color: $default-black;
+
+    .navLinks {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    
+        .navLink {
+            padding: 28px 5% 0;
+            list-style-type: none;
+            box-sizing: border-box;
+            height: 100%;
+    
+            a {
+                color: $default-white;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: $oswald-font-family;
+            }
+        }
+
+        .navLink:hover {
+            background-color: $accent-gray;
+        }
+    }
+
+    .hamburgerButton {
+        background: rgba(0,0,0,0);
+        border: none;
+        display: none;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+    }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px ) {
+    .upperNavBar {
+        .searchBar {
+            width: 275px;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    #logoImageDiv {
+        left: 5px;
+        top: 5px;
+    
+        #logoImage {
+            height: 70px;
+        }
+    }
+
+    .upperNavBar {
+        display: none;
+    }
+
+    .lowerNavBar {
+        .navLinks {
+            display: none;
+        }
+    
+        .hamburgerButton {
+            display: block;
+        }
+    }
+}
