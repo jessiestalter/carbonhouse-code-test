@@ -1,10 +1,12 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Oswald:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600;700&display=swap");
 /* COLORS */
 /* NAV BAR STYLES */
-.navBar {
+#navBar {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
 }
 
 #logoImageDiv {
@@ -19,7 +21,7 @@
   height: 90px;
 }
 
-.upperNavBar {
+#upperNavBar {
   height: 40px;
   background-color: #FFFFFF;
   display: flex;
@@ -27,11 +29,11 @@
   align-items: center;
   gap: 15px;
 }
-.upperNavBar .connectedText {
+#upperNavBar #connectedText {
   font-family: "Oswald", sans-serif;
   color: #de53f3;
 }
-.upperNavBar .socialLinks {
+#upperNavBar #socialLinks {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -39,21 +41,21 @@
   justify-content: center;
   align-items: center;
 }
-.upperNavBar .socialLinks .socialLink {
+#upperNavBar #socialLinks .socialLink {
   padding: 0 8px;
   list-style-type: none;
 }
-.upperNavBar .socialLinks .socialLink a {
+#upperNavBar #socialLinks .socialLink a {
   text-decoration: none;
 }
-.upperNavBar .searchBar {
+#upperNavBar #searchBarDiv {
   position: relative;
   display: flex;
   width: 375px;
   margin-left: 35px;
   margin-right: 0;
 }
-.upperNavBar .searchBar .search {
+#upperNavBar #searchBarDiv #searchBar {
   width: 100%;
   border-radius: 40px;
   border: none;
@@ -62,59 +64,59 @@
   outline: none;
   color: #9DBFAF;
 }
-.upperNavBar .searchBar .search:focus {
+#upperNavBar #searchBarDiv #searchBar:focus {
   color: #000000;
 }
-.upperNavBar .searchBar .searchButton {
+#upperNavBar #searchBarDiv #searchButton {
   cursor: pointer;
   background: rgba(0, 0, 0, 0);
   border: none;
   color: #000000;
 }
-.upperNavBar .loginDiv {
+#upperNavBar #loginDiv {
   display: flex;
   background-color: #de53f3;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.upperNavBar .loginDiv .loginText {
+#upperNavBar #loginDiv .loginText {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   margin-left: 25px;
 }
-.upperNavBar .loginDiv .loginIcon {
+#upperNavBar #loginDiv .loginIcon {
   margin-right: 35px;
 }
 
-.lowerNavBar {
+#lowerNavBar {
   height: 80px;
   width: 100vw;
   background-color: #000000;
 }
-.lowerNavBar .navLinks {
+#lowerNavBar .navLinks {
   height: 100%;
   margin: 0;
   display: flex;
   justify-content: end;
   align-items: center;
 }
-.lowerNavBar .navLinks .navLink {
-  padding: 28px 5% 0;
+#lowerNavBar .navLinks .navLink {
+  padding: 24px 5% 0;
   list-style-type: none;
   box-sizing: border-box;
   height: 100%;
 }
-.lowerNavBar .navLinks .navLink a {
+#lowerNavBar .navLinks .navLink a {
   color: #FFFFFF;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 20px;
   font-family: "Oswald", sans-serif;
 }
-.lowerNavBar .navLinks .navLink:hover {
+#lowerNavBar .navLinks .navLink:hover {
   background-color: #2e2e2e;
 }
-.lowerNavBar .hamburgerButton {
+#lowerNavBar .hamburgerButton {
   background: rgba(0, 0, 0, 0);
   border: none;
   display: none;
@@ -125,7 +127,7 @@
 
 /* MEDIA QUERIES */
 @media (max-width: 1100px) {
-  .upperNavBar .searchBar {
+  #upperNavBar #searchBarDiv {
     width: 275px;
     margin-left: 20px;
   }
@@ -138,17 +140,258 @@
   #logoImageDiv #logoImage {
     height: 70px;
   }
-  .upperNavBar {
+  #upperNavBar {
     display: none;
   }
-  .lowerNavBar .navLinks {
+  #lowerNavBar .navLinks {
     display: none;
   }
-  .lowerNavBar .hamburgerButton {
+  #lowerNavBar .hamburgerButton {
     display: block;
   }
 }
+/* MAIN GRID STYLES */
+#mainGridContainer {
+  padding: 0 25px 15px;
+}
+
+#upcomingEventsDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  border-bottom: 2px solid #000000;
+}
+#upcomingEventsDiv #upcomingEventsHeader {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+}
+#upcomingEventsDiv #layoutButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#upcomingEventsDiv #layoutButtons button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  fill: #000000;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+#upcomingEventsDiv #layoutButtons button svg {
+  margin-top: 2px;
+}
+#upcomingEventsDiv #layoutButtons #gridLayoutButton.selected, #upcomingEventsDiv #layoutButtons #columnLayoutButton.selected {
+  fill: #de53f3;
+  background-color: #FFFFFF;
+}
+
+#mainGridDivDesktop {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+#mainGridDivDesktop .eventCardDiv {
+  width: 32.5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s linear;
+}
+#mainGridDivDesktop .eventCardDiv .infoDiv {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+}
+#mainGridDivDesktop .eventCardDiv .infoDiv .artistName {
+  margin: 0;
+  color: #de53f3;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+}
+#mainGridDivDesktop .eventCardDiv .infoDiv .tourName {
+  margin: 0;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+#mainGridDivMobile {
+  display: none;
+  width: 100%;
+  padding-top: 25px;
+}
+#mainGridDivMobile .eventCardDiv {
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s linear;
+}
+#mainGridDivMobile .eventCardDiv .infoDiv {
+  display: flex;
+  background-color: #FFFFFF;
+}
+#mainGridDivMobile .eventCardDiv .infoDiv .artistImage {
+  width: 33%;
+  margin: 1.5%;
+}
+#mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+#mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .artistName {
+  margin: 0;
+  color: #de53f3;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  cursor: pointer;
+}
+#mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .tourName {
+  margin: 0;
+  font-style: italic;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+}
+#mainGridDivMobile .eventCardDiv .buyTicketsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #de53f3;
+  height: 45px;
+}
+#mainGridDivMobile .eventCardDiv .buyTicketsDiv .buyTicketsText {
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+}
+
+.eventCardDiv:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dateDiv {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  height: 36px;
+}
+.dateDiv p {
+  margin: 0;
+  padding: 5px 15px;
+  color: #de53f3;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+}
+.dateDiv .dayOfWeek {
+  background-image: url("../images/date-block.png");
+  padding-left: 20px;
+  padding-bottom: 0;
+  margin-top: -4px;
+  height: 28px;
+}
+
+@media (max-width: 767px) {
+  #upcomingEventsDiv {
+    justify-content: center;
+  }
+  #upcomingEventsDiv #upcomingEventsHeader {
+    font-size: 32px;
+  }
+  #upcomingEventsDiv #layoutButtons {
+    display: none;
+  }
+  #mainGridDivDesktop {
+    display: none;
+  }
+  #mainGridDivMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 424px) {
+  #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .artistName {
+    font-size: 24px;
+  }
+  #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .tourName {
+    font-size: 14px;
+  }
+}
+@media (max-width: 374px) {
+  #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .artistName {
+    font-size: 18px;
+  }
+  #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv .tourName {
+    font-size: 12px;
+  }
+}
+/* NEWSLETTER SIGNUP STYLES */
+#newsletterSignupContainer {
+  width: 100%;
+  height: 480px;
+  background-image: url("../images/newsletter-background.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newsletterSignupContainer #newsletterSignup {
+  height: 65%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#newsletterSignupContainer #newsletterSignup #newsletterHeading {
+  margin: 0;
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 36px;
+}
+#newsletterSignupContainer #newsletterSignup #newsletterText {
+  margin: 0;
+  color: #de53f3;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 5px;
+}
+#newsletterSignupContainer #newsletterSignup #getConnectedButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-top: 25px;
+  padding: 10px 45px;
+}
+#newsletterSignupContainer #newsletterSignup #getConnectedButton:hover {
+  background-color: #FFFFFF;
+  color: rgb(0, 0, 0);
+}
+#newsletterSignupContainer #newsletterSignup:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
 /* MAIN STYLES */
 body {
   margin: 0;
+  background-color: #e5e5e5;
 }/*# sourceMappingURL=main.css.map */

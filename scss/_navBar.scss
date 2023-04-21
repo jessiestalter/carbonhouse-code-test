@@ -1,8 +1,10 @@
 /* NAV BAR STYLES */
 
-.navBar {
+#navBar {
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 0;
 }
 
 #logoImageDiv {
@@ -18,7 +20,7 @@
     }
 }
 
-.upperNavBar {
+#upperNavBar {
     height: 40px;
     background-color: $default-white;
     display: flex;
@@ -26,12 +28,12 @@
     align-items: center;
     gap: 15px;
 
-    .connectedText {
+    #connectedText {
         font-family: $oswald-font-family;
         color: $chvenue-pink;
     }
 
-    .socialLinks {
+    #socialLinks {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -49,14 +51,14 @@
         }
     }
     
-    .searchBar {
+    #searchBarDiv {
       position: relative;
       display: flex;
       width: 375px;
       margin-left: 35px;
       margin-right: 0;
     
-      .search {
+      #searchBar {
         width: 100%;
         border-radius: 40px;
         border: none;
@@ -66,11 +68,11 @@
         color: #9DBFAF;
       }
     
-      .search:focus{
+      #searchBar:focus{
         color: $default-black;
       }
     
-      .searchButton {
+      #searchButton {
         cursor: pointer;
         background: rgba(0,0,0,0);
         border: none;
@@ -78,7 +80,7 @@
       }
     }
 
-    .loginDiv {
+    #loginDiv {
         display: flex;
         background-color: $chvenue-pink;
         justify-content: center;
@@ -97,7 +99,7 @@
     }
 }
 
-.lowerNavBar {
+#lowerNavBar {
     height: 80px;
     width: 100vw;
     background-color: $default-black;
@@ -110,7 +112,7 @@
         align-items: center;
     
         .navLink {
-            padding: 28px 5% 0;
+            padding: 24px 5% 0;
             list-style-type: none;
             box-sizing: border-box;
             height: 100%;
@@ -118,7 +120,7 @@
             a {
                 color: $default-white;
                 text-decoration: none;
-                font-weight: bold;
+                font-size: 20px;
                 font-family: $oswald-font-family;
             }
         }
@@ -140,8 +142,8 @@
 
 /* MEDIA QUERIES */
 @media (max-width: 1100px ) {
-    .upperNavBar {
-        .searchBar {
+    #upperNavBar {
+        #searchBarDiv {
             width: 275px;
             margin-left: 20px;
         }
@@ -158,11 +160,11 @@
         }
     }
 
-    .upperNavBar {
+    #upperNavBar {
         display: none;
     }
 
-    .lowerNavBar {
+    #lowerNavBar {
         .navLinks {
             display: none;
         }

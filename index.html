@@ -8,13 +8,13 @@
         <title>Carbonhouse Code Test</title>
     </head>
     <body>
-        <nav class="navBar">
+        <nav id="navBar">
             <div id="logoImageDiv">
                 <img src="./images/Logo.png" alt="CH Venue Logo" id="logoImage">
             </div>
-            <div class="upperNavBar">
-                <p class="connectedText">GET CONNECTED</p>
-                <ul class="socialLinks">
+            <div id="upperNavBar">
+                <p id="connectedText">GET CONNECTED</p>
+                <ul id="socialLinks">
                     <li class="socialLink"><a href="#">
                         <img src="./images/Instagram.png" alt="Instagram Icon">
                     </a></li>
@@ -28,18 +28,18 @@
                         <img src="./images/Youtube.png" alt="Youtube Icon">
                     </a></li>
                 </ul>
-                <div class="searchBar">
-                   <input type="text" class="search" placeholder="SEARCH EVENTS">
-                   <button type="submit" class="searchButton">
+                <div id="searchBarDiv">
+                   <input type="text" id="searchBar" placeholder="SEARCH EVENTS">
+                   <button type="submit" id="searchButton">
                      <i class="fa fa-search"></i>
                    </button>
                 </div>
-                <div class="loginDiv">
+                <div id="loginDiv">
                     <p class="loginText">LOGIN</p>
                     <img class="loginIcon" src="./images/loginIcon.png" alt="Login Icon">
                 </div>
             </div>
-            <div class="lowerNavBar">
+            <div id="lowerNavBar">
                 <ul class="navLinks">
                     <li class="navLink"><a href="#">TICKETS</a></li>
                     <li class="navLink"><a href="#">PLAN YOUR VISIT</a></li>
@@ -47,12 +47,218 @@
                     <li class="navLink"><a href="#">ABOUT US</a></li>
                 </ul>
                 <button class="hamburgerButton">
-                    <img src="./images/Hamburger.png" class="hamburgerIcon" alt="More Options">
+                    <img src="./images/hamburger.png" class="hamburgerIcon" alt="More Options">
                 </button>
             </div>
             <div class="bars">
               <i class="fa fa-bars"></i>
             </div>
         </nav>
+        <div id="mainGridContainer">
+            <div id="upcomingEventsDiv">
+                <h1 id="upcomingEventsHeader">UPCOMING EVENTS</h1>
+                <div id="layoutButtons">
+                    <button id="gridLayoutButton" class="selected">
+                        <svg id="gridSVG" viewBox="0 0 65 65" width="32.5" height="32.5">
+                            <rect width="15" height="15"></rect>
+                            <rect x="25" width="15" height="15"></rect>
+                            <rect x="50" width="15" height="15"></rect>
+                            <rect y="25" width="15" height="15"></rect>
+                            <rect y="25" x="25" width="15" height="15"></rect>
+                            <rect y="25" x="50" width="15" height="15"></rect>
+                            <rect y="50" width="15" height="15"></rect>
+                            <rect y="50" x="25" width="15" height="15"></rect>
+                            <rect y="50" x="50" width="15" height="15"></rect>
+                        </svg>
+                    </button>
+                    <button id="columnLayoutButton">
+                        <svg id="hamburgerSVG" viewBox="0 0 65 65" width="32.5" height="32.5">
+                            <rect width="65" height="15"></rect>
+                            <rect y="25" width="65" height="15"></rect>
+                            <rect y="50" width="65" height="15"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mainGridDivDesktop">
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/nicki-minaj.png" alt="Nicki Minaj">
+                    <div class="dateDiv">
+                        <p>JULY 25, 2015</p>
+                        <p class="dayOfWeek">FRIDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">NICKI MINAJ</h1>
+                        <p class="tourName">The Pink Print Tour</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/nick-jonas.png" alt="Nick Jonas">
+                    <div class="dateDiv">
+                        <p>JULY 30, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">NICK JONAS</h1>
+                        <p class="tourName">'Live In Concert' Tour</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/taylor-swift.png" alt="Taylor Swift">
+                    <div class="dateDiv">
+                        <p>August 06, 2015</p>
+                        <p class="dayOfWeek">THURSDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">TAYLOR SWIFT</h1>
+                        <p class="tourName">The 1989 World Tour</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/sam-smith.png" alt="Sam Smith">
+                    <div class="dateDiv">
+                        <p>August 15, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">SAM SMITH</h1>
+                        <p class="tourName">In the Lonely Hour Tour</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/iggy-azalea.png" alt="Iggy Azalea">
+                    <div class="dateDiv">
+                        <p>August 22, 2015</p>
+                        <p class="dayOfWeek">FRIDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">IGGY AZALEA</h1>
+                        <p class="tourName">'Great Escape' Tour</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <img class="artistImage" src="./images/brandon-flowers.png" alt="Brandon Flowers">
+                    <div class="dateDiv">
+                        <p>August 30, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="infoDiv">
+                        <h1 class="artistName">BRANDON FLOWERS</h1>
+                        <p class="tourName">with Temper Trap</p>
+                    </div>
+                </div>
+            </div>
+            <div id="mainGridDivMobile">
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/nicki-minaj.png" alt="Nicki Minaj">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">NICKI MINAJ</h1>
+                            <p class="tourName">The Pink Print Tour</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>July 25, 2015</p>
+                        <p class="dayOfWeek">FRIDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/nick-jonas.png" alt="Nick Jonas">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">NICK JONAS</h1>
+                            <p class="tourName">'Live In Concert' Tour</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>July 30, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/taylor-swift.png" alt="Taylor Swift">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">Taylor Swift</h1>
+                            <p class="tourName">The 1989 World Tour</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>August 06, 2015</p>
+                        <p class="dayOfWeek">THURSDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/sam-smith.png" alt="Sam Smith">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">SAM SMITH</h1>
+                            <p class="tourName">In the Lonely Hour Tour</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>August 15, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/iggy-azalea.png" alt="Iggy Azalea">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">IGGY AZALEA</h1>
+                            <p class="tourName">'Great Escape' Tour</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>August 22, 2015</p>
+                        <p class="dayOfWeek">FRIDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+                <div class="eventCardDiv">
+                    <div class="infoDiv">
+                        <img class="artistImage" src="./images/brandon-flowers.png" alt="Brandon Flowers">
+                        <div class="artistInfoTextDiv">
+                            <h1 class="artistName">BRANDON FLOWERS</h1>
+                            <p class="tourName">with Temper Trap</p>
+                        </div>
+                    </div>
+                    <div class="dateDiv">
+                        <p>August 30, 2015</p>
+                        <p class="dayOfWeek">SATURDAY</p>
+                    </div>
+                    <div class="buyTicketsDiv">
+                        <img class="ticketIcon" src="./images/ticket-icon.png" alt="Ticket Icon">
+                        <p class="buyTicketsText">BUY TICKETS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newsletterSignupContainer">
+            <div id="newsletterSignup">
+                <h1 id="newsletterHeading">NEWSLETTER SIGNUP</h1>
+                <p id="newsletterText">Stay updated on the best concerts and most hip events!</p>
+                <button id="getConnectedButton">GET CONNECTED</button>
+            </div>
+        </div>
     </body>
 </html>

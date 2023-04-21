@@ -1,8 +1,11 @@
 @import 'variables';
 @import 'navBar';
+@import 'mainGrid';
+@import 'newsletterSignup';
 
 /* MAIN STYLES */
 
 body {
   margin: 0;
+  background-color: $background-gray;
 }

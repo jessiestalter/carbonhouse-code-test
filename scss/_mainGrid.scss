@@ -1,0 +1,219 @@
+/* MAIN GRID STYLES */
+#mainGridContainer {
+    padding: 0 25px 15px;
+}
+
+#upcomingEventsDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    border-bottom: 2px solid $default-black;
+
+    #upcomingEventsHeader {
+        font-family: $oswald-font-family;
+        margin: 0;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    #layoutButtons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+
+        button {
+            background-color: rgba(0,0,0,0);
+            border: none;
+            fill: $default-black;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+            svg {
+                margin-top: 2px;
+            }
+        }
+
+        #gridLayoutButton.selected, #columnLayoutButton.selected {
+            fill: $chvenue-pink;
+            background-color: $default-white;
+        }
+    }
+}
+
+#mainGridDivDesktop {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    justify-content: space-between;
+    padding-top: 25px;
+
+    .eventCardDiv {
+        width: 32.5%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow .2s linear;
+
+        .infoDiv {
+            background-color: $default-white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 95px;
+
+            .artistName {
+                margin: 0;
+                color: $chvenue-pink;
+                font-family: $oswald-font-family;
+                font-weight: 400;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
+            .tourName {
+                margin: 0;
+                font-style: italic;
+                font-family: $merriweather-font-family;
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+#mainGridDivMobile {
+    display: none;
+    width: 100%;
+    padding-top: 25px;
+
+    .eventCardDiv {
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow .2s linear;
+
+        .infoDiv {
+            display: flex;
+            background-color: $default-white;
+    
+            .artistImage {
+                width: 33%;
+                margin: 1.5%;
+            }
+    
+            .artistInfoTextDiv {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+
+                .artistName {
+                    margin: 0;
+                    color: $chvenue-pink;
+                    font-family: $oswald-font-family;
+                    font-weight: 400;
+                    font-size: 28px;
+                    cursor: pointer;
+                }
+                
+                .tourName {
+                    margin: 0;
+                    font-style: italic;
+                    font-family: $merriweather-font-family;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .buyTicketsDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: $chvenue-pink;
+            height: 45px;
+
+            .buyTicketsText {
+                color: $default-white;
+                font-family: $oswald-font-family;
+            }
+        }
+    }
+}
+
+.eventCardDiv:hover {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.3);
+}
+
+.dateDiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: $default-black;
+    height: 36px;
+
+    p {
+        margin: 0;
+        padding: 5px 15px;
+        color: $chvenue-pink;
+        font-family: $oswald-font-family;
+        font-size: 14px;
+    }
+
+    .dayOfWeek {
+        background-image: url('../images/date-block.png');
+        padding-left: 20px;
+        padding-bottom: 0;
+        margin-top: -4px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    #upcomingEventsDiv {
+        justify-content: center;
+
+        #upcomingEventsHeader {
+            font-size: 32px;
+        }
+
+        #layoutButtons {
+            display: none;
+        }
+    }
+
+    #mainGridDivDesktop {
+        display: none;
+    }
+
+    #mainGridDivMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 424px) {
+    #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv {
+        .artistName {
+            font-size: 24px;
+        }
+
+        .tourName {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    #mainGridDivMobile .eventCardDiv .infoDiv .artistInfoTextDiv {
+        .artistName {
+            font-size: 18px;
+        }
+
+        .tourName {
+            font-size: 12px;
+        }
+    }
+}

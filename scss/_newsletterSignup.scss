@@ -1,0 +1,58 @@
+/* NEWSLETTER SIGNUP STYLES */
+
+#newsletterSignupContainer {
+    width: 100%;
+    height: 480px;
+    background-image: url('../images/newsletter-background.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #newsletterSignup {
+        height: 65%;
+        width: 50%;
+        background-color: rgba(0,0,0,0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #newsletterHeading {
+            margin: 0;
+            color: $default-white;
+            font-family: $oswald-font-family;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-size: 36px;
+        }
+
+        #newsletterText {
+            margin: 0;
+            color: $chvenue-pink;
+            font-family: $merriweather-font-family;
+            font-style: italic;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        #getConnectedButton {
+            background-color: rgba(0,0,0,0);
+            border: 2px solid $default-white;
+            color: $default-white;
+            font-family: $oswald-font-family;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            margin-top: 25px;
+            padding: 10px 45px;
+        }
+
+        #getConnectedButton:hover {
+            background-color: $default-white;
+            color: rgba(0,0,0);
+        }
+    }
+
+    #newsletterSignup:hover {
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.3);
+    }
+}
