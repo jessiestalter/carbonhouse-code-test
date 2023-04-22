@@ -1,0 +1,294 @@
+/* SOCIAL AND DIRECTIONS SECTIONS STYLING */
+
+#socialAndDirectionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 35px 25px;
+    background-color: $default-white;
+
+    .mainDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        overflow: auto;
+
+        .headingTextDiv {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            height: 65px;
+            gap: 10px;
+
+            .headingText {
+                font-family: $oswald-font-family;
+                color: $default-black;
+                font-weight: 400;
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .subText {
+                font-family: $merriweather-font-family;
+                color: $chvenue-pink;
+                font-style: italic;
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+                margin-top: 5px;
+            }
+        }
+
+        #socialTabs {
+            display: flex;
+            gap: 2px;
+            width: 100%;
+            height: 50px;
+
+            .socialTab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 33%;
+                background-color: $default-black;
+                color: $default-white;
+                border: none;
+                font-family: $oswald-font-family;
+                font-weight: 400;
+
+                .fa-instagram {
+                    font-weight: 600;
+                }
+            }
+
+            .socialTab:hover, .socialTab:focus {
+                background-image: url('../images/socialtab-active-background.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        #socialPostsContainer {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+            height: 325px;
+            margin-top: 10px;
+            background-color: $background-gray;
+            padding: 20px 10px;
+
+            #topDiv {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                #followText {
+                    margin: 0 0 15px 15px;
+                    font-family: $oswald-font-family;
+                    font-weight: 400;
+    
+                    a {
+                        color: $chvenue-pink;
+                        text-decoration: none;
+                    }
+                }
+
+                #scrollButtons {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+                    button {
+                        background-color: rgba(0,0,0,0);
+                        border: none;
+                        color: $chvenue-pink;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .socialPostsList {
+                display: flex;
+                height: 100%;
+                gap: 10px;
+                overflow-x: scroll;
+
+                .socialPost {
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 300px;
+                    padding: 15px;
+                    justify-content: space-between;
+                    background-color: $default-white;
+                    
+                    .logoAndHandle {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 8px;
+
+                        .fa-brands {
+                            color: $chvenue-pink;
+                        }
+
+                        .handle {
+                            margin: 0;
+                            font-family: $oswald-font-family;
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+
+                    .postText {
+                        height: 70%;
+                        font-family: $lato-font-family;
+
+                        span {
+                            color: $chvenue-pink;
+                        }
+                    }
+
+                    .bottomBar {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 30px;
+                        background-color: $chvenue-pink;
+                        margin: 0 -15px -15px;
+                        padding: 0 15px;
+
+                        .dateTime {
+                            color: $default-white;
+                            margin: 0;
+                            font-family: $oswald-font-family;
+                            font-weight: 400;
+                            font-size: 12px;
+                        }
+
+                        .actionLinks {
+                            display: flex;
+                            gap: 8px;
+                            color: $default-white;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #addressDiv {
+            display: flex;
+            gap: 25px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            background-color: $default-black;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 15px;
+
+            p {
+                margin: 0;
+                color: $default-white;
+                font-family: $oswald-font-family;
+            }
+
+            .boldText {
+                font-weight: 500;
+            }
+
+            .addressText {
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+
+        #mapDiv {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
+            height: 325px;
+            margin-top: 10px;
+
+            .gm-style-iw.gm-style-iw-c {
+                background-color: $default-black;
+
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    #socialAndDirectionsContainer {
+        flex-direction: column;
+
+        .mainDiv {
+            width: 100%;
+
+            #addressDiv {
+                flex-direction: column;
+                gap: 0;
+                height: 75px;
+            }
+    
+            #socialTabs {
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #socialAndDirectionsContainer {
+        .mainDiv {
+            .headingTextDiv {
+                flex-direction: column;
+                gap: 0;
+                align-items: start;
+                margin-bottom: 8px;
+            }
+
+            #socialPostsContainer #topDiv #scrollButtons {
+                display: none;
+            }
+
+            #addressDiv {
+                .addressText {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// @media (max-width: 374px) {
+//     #socialAndDirectionsContainer {
+//         .mainDiv {
+//             .headingTextDiv {
+//                 .headingText {
+//                     font-size: 16px;
+//                 }
+    
+//                 .subText {
+//                     margin-top: 0;
+//                     font-size: 11px;
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -9,6 +9,7 @@
     justify-content: center;
 
     #newsletterSignup {
+        box-sizing: border-box;
         height: 65%;
         width: 50%;
         background-color: rgba(0,0,0,0.7);
@@ -16,6 +17,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
 
         #newsletterHeading {
             margin: 0;
@@ -24,15 +26,19 @@
             font-weight: 500;
             letter-spacing: 2px;
             font-size: 36px;
+            text-align: center;
+            line-height: 1;
         }
 
         #newsletterText {
-            margin: 0;
+            margin: 10px 0px;
             color: $chvenue-pink;
             font-family: $merriweather-font-family;
             font-style: italic;
             font-size: 18px;
-            margin-top: 5px;
+            text-align: center;
+            // margin-top: 5px;
+            // padding: 5px;
         }
 
         #getConnectedButton {
@@ -54,5 +60,20 @@
 
     #newsletterSignup:hover {
         box-shadow: 0 4px 10px 0 rgba(0,0,0,.3);
+    }
+}
+
+@media (max-width: 650px) {
+    #newsletterSignupContainer {
+        height: 400px;
+
+        #newsletterSignup {
+            height: 80%;
+            width: 90%;
+
+            #getConnectedButton {
+                width: 100%;
+            }
+        }
     }
 }

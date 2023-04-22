@@ -5,6 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">   
         <meta name="viewport" content="width=device-width, initial-scale=1.0">   
         <link rel="stylesheet" href="./css/main.css">
+        <link href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+        <link href="./node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
+        <link href="./node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="./js/scroll.js" defer></script>
+        <script src="./js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARNw-kDilT3c9NJVleBXVuVX6hUb_Ei_Y&callback=myMap&v=weekly" defer></script>
         <title>Carbonhouse Code Test</title>
     </head>
     <body>
@@ -16,16 +23,16 @@
                 <p id="connectedText">GET CONNECTED</p>
                 <ul id="socialLinks">
                     <li class="socialLink"><a href="#">
-                        <img src="./images/Instagram.png" alt="Instagram Icon">
+                        <i class="fa-brands fa-instagram"></i>
                     </a></li>
                     <li class="socialLink"><a href="#">
-                        <img src="./images/Twitter.png" alt="Twitter Icon">
+                        <i class="fa-brands fa-twitter"></i>
                     </a></li>
                     <li class="socialLink"><a href="#">
-                        <img src="./images/Facebook.png" alt="Facebook Icon">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </a></li>
                     <li class="socialLink"><a href="#">
-                        <img src="./images/Youtube.png" alt="Youtube Icon">
+                        <i class="fa-brands fa-youtube"></i>
                     </a></li>
                 </ul>
                 <div id="searchBarDiv">
@@ -49,9 +56,6 @@
                 <button class="hamburgerButton">
                     <img src="./images/hamburger.png" class="hamburgerIcon" alt="More Options">
                 </button>
-            </div>
-            <div class="bars">
-              <i class="fa fa-bars"></i>
             </div>
         </nav>
         <div id="mainGridContainer">
@@ -258,6 +262,100 @@
                 <h1 id="newsletterHeading">NEWSLETTER SIGNUP</h1>
                 <p id="newsletterText">Stay updated on the best concerts and most hip events!</p>
                 <button id="getConnectedButton">GET CONNECTED</button>
+            </div>
+        </div>
+        <div id="socialAndDirectionsContainer">
+            <div class="mainDiv">
+                <div class="headingTextDiv">
+                    <h1 class="headingText">GET SOCIAL</h1>
+                    <p class="subText">Stay Connected Wherever You Are!</p>
+                </div>
+                <div id="socialTabs">
+                    <button class="socialTab">
+                        <i class="fa-brands fa-twitter"></i>
+                        TWITTER
+                    </button>
+                    <button class="socialTab">
+                        <i class="fa-brands fa-instagram"></i>
+                        INSTAGRAM
+                    </button>
+                    <button class="socialTab">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        FACEBOOK
+                    </button>
+                </div>
+                <div id="socialPostsContainer">
+                    <div id="topDiv">
+                        <p id="followText">FOLLOW <a href="https://twitter.com/" target="_blank">@CHVENUE</a></p>
+                        <div id="scrollButtons">
+                            <button id="leftScroll">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button id="rightScroll">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="socialPostsList" id="twitterPostsList">
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-twitter"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: .@dylangardner23 </span>will be opening for 'The Walking Dead's' <span>@emmykinney </span>on her tour! <span>bit.ly/1GppUEs pic.twitter.com/bgnkAEIB5O</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">8:14 PM / 3 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-twitter"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: .@dylangardner23 </span>will be opening for 'The Walking Dead's' <span>@emmykinney </span>on her tour! <span>bit.ly/1GppUEs pic.twitter.com/bgnkAEIB5O</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">8:14 PM / 3 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-twitter"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: .@dylangardner23 </span>will be opening for 'The Walking Dead's' <span>@emmykinney </span>on her tour! <span>bit.ly/1GppUEs pic.twitter.com/bgnkAEIB5O</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">8:14 PM / 3 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainDiv">
+                <div class="headingTextDiv">
+                    <h1 class="headingText">GET DIRECTIONS</h1>
+                    <p class="subText">Map Out Your Trip!</p>
+                </div>
+                <div id="addressDiv">
+                    <p class="boldText">ADDRESS:</p>
+                    <p class="addressText">5727 Westpark Drive. Suite 108, Charlotte, NC 28217</p>
+                </div>
+                <div id="mapDiv"></div>
+                <div id="content">Hello world!</div>
             </div>
         </div>
     </body>

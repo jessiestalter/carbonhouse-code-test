@@ -47,6 +47,10 @@
 }
 #upperNavBar #socialLinks .socialLink a {
   text-decoration: none;
+  color: #000000;
+}
+#upperNavBar #socialLinks .socialLink a .fa-instagram {
+  font-weight: 600;
 }
 #upperNavBar #searchBarDiv {
   position: relative;
@@ -118,6 +122,7 @@
 }
 #lowerNavBar .hamburgerButton {
   background: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
   border: none;
   display: none;
   position: absolute;
@@ -152,7 +157,7 @@
 }
 /* MAIN GRID STYLES */
 #mainGridContainer {
-  padding: 0 25px 15px;
+  padding: 0 25px 35px;
 }
 
 #upcomingEventsDiv {
@@ -348,6 +353,7 @@
   justify-content: center;
 }
 #newsletterSignupContainer #newsletterSignup {
+  box-sizing: border-box;
   height: 65%;
   width: 50%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -355,6 +361,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 #newsletterSignupContainer #newsletterSignup #newsletterHeading {
   margin: 0;
@@ -363,14 +370,16 @@
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 36px;
+  text-align: center;
+  line-height: 1;
 }
 #newsletterSignupContainer #newsletterSignup #newsletterText {
-  margin: 0;
+  margin: 10px 0px;
   color: #de53f3;
   font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 18px;
-  margin-top: 5px;
+  text-align: center;
 }
 #newsletterSignupContainer #newsletterSignup #getConnectedButton {
   background-color: rgba(0, 0, 0, 0);
@@ -390,6 +399,249 @@
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 650px) {
+  #newsletterSignupContainer {
+    height: 400px;
+  }
+  #newsletterSignupContainer #newsletterSignup {
+    height: 80%;
+    width: 90%;
+  }
+  #newsletterSignupContainer #newsletterSignup #getConnectedButton {
+    width: 100%;
+  }
+}
+/* SOCIAL AND DIRECTIONS SECTIONS STYLING */
+#socialAndDirectionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 35px 25px;
+  background-color: #FFFFFF;
+}
+#socialAndDirectionsContainer .mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  overflow: auto;
+}
+#socialAndDirectionsContainer .mainDiv .headingTextDiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  gap: 10px;
+}
+#socialAndDirectionsContainer .mainDiv .headingTextDiv .headingText {
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  margin: 0;
+  font-size: 24px;
+}
+#socialAndDirectionsContainer .mainDiv .headingTextDiv .subText {
+  font-family: "Merriweather", serif;
+  color: #de53f3;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 5px;
+}
+#socialAndDirectionsContainer .mainDiv #socialTabs {
+  display: flex;
+  gap: 2px;
+  width: 100%;
+  height: 50px;
+}
+#socialAndDirectionsContainer .mainDiv #socialTabs .socialTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 33%;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+#socialAndDirectionsContainer .mainDiv #socialTabs .socialTab .fa-instagram {
+  font-weight: 600;
+}
+#socialAndDirectionsContainer .mainDiv #socialTabs .socialTab:hover, #socialAndDirectionsContainer .mainDiv #socialTabs .socialTab:focus {
+  background-image: url("../images/socialtab-active-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 325px;
+  margin-top: 10px;
+  background-color: #e5e5e5;
+  padding: 20px 10px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv #followText {
+  margin: 0 0 15px 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv #followText a {
+  color: #de53f3;
+  text-decoration: none;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv #scrollButtons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv #scrollButtons button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #de53f3;
+  cursor: pointer;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+  overflow-x: scroll;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  width: 300px;
+  padding: 15px;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle .fa-brands {
+  color: #de53f3;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle .handle {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .postText {
+  height: 70%;
+  font-family: "Lato", sans-serif;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .postText span {
+  color: #de53f3;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  background-color: #de53f3;
+  margin: 0 -15px -15px;
+  padding: 0 15px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .bottomBar .dateTime {
+  color: #FFFFFF;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .bottomBar .actionLinks {
+  display: flex;
+  gap: 8px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+#socialAndDirectionsContainer .mainDiv #addressDiv {
+  display: flex;
+  gap: 25px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+#socialAndDirectionsContainer .mainDiv #addressDiv p {
+  margin: 0;
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+}
+#socialAndDirectionsContainer .mainDiv #addressDiv .boldText {
+  font-weight: 500;
+}
+#socialAndDirectionsContainer .mainDiv #addressDiv .addressText {
+  font-weight: 400;
+  font-size: 14px;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 325px;
+  margin-top: 10px;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .gm-style-iw.gm-style-iw-c {
+  background-color: #000000;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .gm-style-iw.gm-style-iw-c button {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  #socialAndDirectionsContainer {
+    flex-direction: column;
+  }
+  #socialAndDirectionsContainer .mainDiv {
+    width: 100%;
+  }
+  #socialAndDirectionsContainer .mainDiv #addressDiv {
+    flex-direction: column;
+    gap: 0;
+    height: 75px;
+  }
+}
+@media (max-width: 767px) {
+  #socialAndDirectionsContainer .mainDiv .headingTextDiv {
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+    margin-bottom: 8px;
+  }
+  #socialAndDirectionsContainer .mainDiv #socialPostsContainer #topDiv #scrollButtons {
+    display: none;
+  }
+  #socialAndDirectionsContainer .mainDiv #addressDiv .addressText {
+    font-size: 12px;
+  }
+}
 /* MAIN STYLES */
 body {
   margin: 0;
