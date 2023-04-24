@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   position: sticky;
+  z-index: 1;
   top: 0;
 }
 
@@ -27,11 +28,12 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 #upperNavBar #connectedText {
   font-family: "Oswald", sans-serif;
   color: #de53f3;
+  font-size: 14px;
 }
 #upperNavBar #socialLinks {
   height: 100%;
@@ -52,6 +54,9 @@
 #upperNavBar #socialLinks .socialLink a .fa-instagram {
   font-weight: 600;
 }
+#upperNavBar #socialLinks .socialLink a:hover {
+  color: #de53f3;
+}
 #upperNavBar #searchBarDiv {
   position: relative;
   display: flex;
@@ -63,10 +68,25 @@
   width: 100%;
   border-radius: 40px;
   border: none;
-  padding: 5px;
+  padding: 5px 20px;
   background-color: #E1E1E1;
   outline: none;
-  color: #9DBFAF;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #000000;
+}
+#upperNavBar #searchBarDiv #searchBar::-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+#upperNavBar #searchBarDiv #searchBar::placeholder {
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 1.2px;
 }
 #upperNavBar #searchBarDiv #searchBar:focus {
   color: #000000;
@@ -76,6 +96,9 @@
   background: rgba(0, 0, 0, 0);
   border: none;
   color: #000000;
+  position: absolute;
+  right: 5px;
+  top: 4px;
 }
 #upperNavBar #loginDiv {
   display: flex;
@@ -88,6 +111,7 @@
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   margin-left: 25px;
+  font-size: 14px;
 }
 #upperNavBar #loginDiv .loginIcon {
   margin-right: 35px;
@@ -106,7 +130,7 @@
   align-items: center;
 }
 #lowerNavBar .navLinks .navLink {
-  padding: 24px 5% 0;
+  padding: 28px 5% 0;
   list-style-type: none;
   box-sizing: border-box;
   height: 100%;
@@ -114,11 +138,17 @@
 #lowerNavBar .navLinks .navLink a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
   font-family: "Oswald", sans-serif;
+  letter-spacing: 1.2px;
+  transition: color 0.2s linear;
 }
-#lowerNavBar .navLinks .navLink:hover {
-  background-color: #2e2e2e;
+#lowerNavBar .navLinks .navLink.inactive a {
+  color: #505050;
+}
+#lowerNavBar .navLinks .navLink a:focus {
+  color: #de53f3;
 }
 #lowerNavBar .hamburgerButton {
   background: rgba(0, 0, 0, 0);
@@ -177,14 +207,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 #upcomingEventsDiv #layoutButtons button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   fill: #000000;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 #upcomingEventsDiv #layoutButtons button svg {
@@ -209,6 +239,41 @@
   flex-direction: column;
   transition: box-shadow 0.2s linear;
 }
+#mainGridDivDesktop .eventCardDiv .imageDiv {
+  position: relative;
+}
+#mainGridDivDesktop .eventCardDiv .imageDiv .artistImage {
+  width: 100%;
+  height: 100%;
+}
+#mainGridDivDesktop .eventCardDiv .imageDiv .imageOverlay {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainGridDivDesktop .eventCardDiv .imageDiv .imageOverlay .buyTicketsButton {
+  opacity: 0;
+  background-color: #de53f3;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 50px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+#mainGridDivDesktop .eventCardDiv .imageDiv .imageOverlay .buyTicketsButton:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
 #mainGridDivDesktop .eventCardDiv .infoDiv {
   background-color: #FFFFFF;
   display: flex;
@@ -223,20 +288,29 @@
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
+  letter-spacing: 1.2px;
   cursor: pointer;
 }
 #mainGridDivDesktop .eventCardDiv .infoDiv .tourName {
   margin: 0;
   font-style: italic;
   font-family: "Merriweather", serif;
-  font-size: 14px;
+  font-size: 15px;
   padding-bottom: 10px;
+}
+#mainGridDivDesktop .eventCardDiv:hover .imageDiv .imageOverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#mainGridDivDesktop .eventCardDiv:hover .imageDiv .imageOverlay .buyTicketsButton {
+  opacity: 1;
 }
 
 #mainGridDivMobile {
   display: none;
   width: 100%;
   padding-top: 25px;
+  flex-direction: column;
+  gap: 20px;
 }
 #mainGridDivMobile .eventCardDiv {
   display: flex;
@@ -277,10 +351,22 @@
   gap: 20px;
   background-color: #de53f3;
   height: 45px;
+  cursor: pointer;
 }
 #mainGridDivMobile .eventCardDiv .buyTicketsDiv .buyTicketsText {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
+}
+
+#mainGridDivMobile.onDesktop .eventCardDiv .infoDiv .artistInfoTextDiv {
+  padding-top: 5%;
+  padding-left: 5%;
+}
+#mainGridDivMobile.onDesktop .eventCardDiv .infoDiv .artistInfoTextDiv .artistName {
+  font-size: 36px;
+}
+#mainGridDivMobile.onDesktop .eventCardDiv .infoDiv .artistInfoTextDiv .tourName {
+  font-size: 24px;
 }
 
 .eventCardDiv:hover {
@@ -293,12 +379,14 @@
   background-color: #000000;
   height: 36px;
 }
-.dateDiv p {
+.dateDiv .date, .dateDiv .dayOfWeek {
   margin: 0;
-  padding: 5px 15px;
+  padding: 7px 15px;
   color: #de53f3;
   font-family: "Oswald", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
 }
 .dateDiv .dayOfWeek {
   background-image: url("../images/date-block.png");
@@ -317,14 +405,6 @@
   }
   #upcomingEventsDiv #layoutButtons {
     display: none;
-  }
-  #mainGridDivDesktop {
-    display: none;
-  }
-  #mainGridDivMobile {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
 }
 @media (max-width: 424px) {
@@ -390,6 +470,7 @@
   letter-spacing: 1.2px;
   margin-top: 25px;
   padding: 10px 45px;
+  cursor: pointer;
 }
 #newsletterSignupContainer #newsletterSignup #getConnectedButton:hover {
   background-color: #FFFFFF;
@@ -469,11 +550,12 @@
   border: none;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
+  cursor: pointer;
 }
 #socialAndDirectionsContainer .mainDiv #socialTabs .socialTab .fa-instagram {
   font-weight: 600;
 }
-#socialAndDirectionsContainer .mainDiv #socialTabs .socialTab:hover, #socialAndDirectionsContainer .mainDiv #socialTabs .socialTab:focus {
+#socialAndDirectionsContainer .mainDiv #socialTabs .socialTab:hover, #socialAndDirectionsContainer .mainDiv #socialTabs .socialTab.active {
   background-image: url("../images/socialtab-active-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -525,7 +607,8 @@
   flex-direction: column;
   box-sizing: border-box;
   height: 100%;
-  width: 300px;
+  min-width: 260px;
+  max-width: 260px;
   padding: 15px;
   justify-content: space-between;
   background-color: #FFFFFF;
@@ -538,6 +621,9 @@
 }
 #socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle .fa-brands {
   color: #de53f3;
+}
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle .fa-instagram {
+  font-weight: 600;
 }
 #socialAndDirectionsContainer .mainDiv #socialPostsContainer .socialPostsList .socialPost .logoAndHandle .handle {
   margin: 0;
@@ -574,6 +660,9 @@
   color: #FFFFFF;
   font-size: 12px;
 }
+#socialAndDirectionsContainer .mainDiv #socialPostsContainer #instagramPostsList, #socialAndDirectionsContainer .mainDiv #socialPostsContainer #facebookPostsList {
+  display: none;
+}
 #socialAndDirectionsContainer .mainDiv #addressDiv {
   display: flex;
   gap: 25px;
@@ -604,11 +693,44 @@
   height: 325px;
   margin-top: 10px;
 }
-#socialAndDirectionsContainer .mainDiv #mapDiv .gm-style-iw.gm-style-iw-c {
+#socialAndDirectionsContainer .mainDiv #mapDiv .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(6%, -15%);
   background-color: #000000;
+  color: #FFFFFF;
+  padding: 15px 25px 15px 15px;
+  font-family: "Oswald", sans-serif;
 }
-#socialAndDirectionsContainer .mainDiv #mapDiv .gm-style-iw.gm-style-iw-c button {
-  display: none;
+#socialAndDirectionsContainer .mainDiv #mapDiv .popup p {
+  margin: 0;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .popup p.bold {
+  font-weight: 600;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .popupAnchor {
+  position: absolute;
+  width: 100%;
+  bottom: 8px;
+  left: 0;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .popupAnchor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 9px solid #000000;
+}
+#socialAndDirectionsContainer .mainDiv #mapDiv .popupContainer {
+  cursor: auto;
+  height: 0;
+  position: absolute;
+  width: 200px;
 }
 
 ::-webkit-scrollbar {

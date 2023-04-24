@@ -60,13 +60,14 @@
                 border: none;
                 font-family: $oswald-font-family;
                 font-weight: 400;
+                cursor: pointer;
 
                 .fa-instagram {
                     font-weight: 600;
                 }
             }
 
-            .socialTab:hover, .socialTab:focus {
+            .socialTab:hover, .socialTab.active {
                 background-image: url('../images/socialtab-active-background.png');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -125,7 +126,8 @@
                     flex-direction: column;
                     box-sizing: border-box;
                     height: 100%;
-                    width: 300px;
+                    min-width: 260px;
+                    max-width: 260px;
                     padding: 15px;
                     justify-content: space-between;
                     background-color: $default-white;
@@ -138,6 +140,10 @@
 
                         .fa-brands {
                             color: $chvenue-pink;
+                        }
+
+                        .fa-instagram {
+                            font-weight: 600;
                         }
 
                         .handle {
@@ -183,6 +189,10 @@
                     }
                 }
             }
+
+            #instagramPostsList, #facebookPostsList {
+                display: none;
+            }
         }
 
         #addressDiv {
@@ -219,12 +229,49 @@
             height: 325px;
             margin-top: 10px;
 
-            .gm-style-iw.gm-style-iw-c {
+            .popup {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(6%, -15%);
                 background-color: $default-black;
+                color: $default-white;
+                padding: 15px 25px 15px 15px;
+                font-family: $oswald-font-family;
+            }
 
-                button {
-                    display: none;
-                }
+            .popup p {
+                margin: 0;
+            }
+
+            .popup p.bold {
+                font-weight: 600;
+            }
+              
+            .popupAnchor {
+                position: absolute;
+                width: 100%;
+                bottom: 8px;
+                left: 0;
+            }
+              
+            .popupAnchor::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-bottom: 7px solid transparent;         
+                border-right: 9px solid $default-black; 
+            }
+              
+            .popupContainer {
+                cursor: auto;
+                height: 0;
+                position: absolute;
+                width: 200px;
             }
         }
     }
@@ -245,9 +292,6 @@
                 flex-direction: column;
                 gap: 0;
                 height: 75px;
-            }
-    
-            #socialTabs {
             }
         }
     }

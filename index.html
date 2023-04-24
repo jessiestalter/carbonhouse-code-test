@@ -9,10 +9,14 @@
         <link href="./node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
         <link href="./node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script src="./js/scroll.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="./js/socialPosts.js" defer></script>
         <script src="./js/map.js"></script>
+        <script src="./js/navBar.js" defer></script>
+        <script src="./js/layoutButtons.js" defer></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARNw-kDilT3c9NJVleBXVuVX6hUb_Ei_Y&callback=myMap&v=weekly" defer></script>
         <title>Carbonhouse Code Test</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     </head>
     <body>
         <nav id="navBar">
@@ -22,16 +26,16 @@
             <div id="upperNavBar">
                 <p id="connectedText">GET CONNECTED</p>
                 <ul id="socialLinks">
-                    <li class="socialLink"><a href="#">
+                    <li class="socialLink"><a href="https://www.instagram.com" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a></li>
-                    <li class="socialLink"><a href="#">
+                    <li class="socialLink"><a href="https://www.twitter.com" target="_blank">
                         <i class="fa-brands fa-twitter"></i>
                     </a></li>
-                    <li class="socialLink"><a href="#">
+                    <li class="socialLink"><a href="https://www.facebook.com" target="_blank">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a></li>
-                    <li class="socialLink"><a href="#">
+                    <li class="socialLink"><a href="https://www.youtube.com" target="_blank">
                         <i class="fa-brands fa-youtube"></i>
                     </a></li>
                 </ul>
@@ -63,32 +67,37 @@
                 <h1 id="upcomingEventsHeader">UPCOMING EVENTS</h1>
                 <div id="layoutButtons">
                     <button id="gridLayoutButton" class="selected">
-                        <svg id="gridSVG" viewBox="0 0 65 65" width="32.5" height="32.5">
-                            <rect width="15" height="15"></rect>
-                            <rect x="25" width="15" height="15"></rect>
-                            <rect x="50" width="15" height="15"></rect>
-                            <rect y="25" width="15" height="15"></rect>
-                            <rect y="25" x="25" width="15" height="15"></rect>
-                            <rect y="25" x="50" width="15" height="15"></rect>
-                            <rect y="50" width="15" height="15"></rect>
-                            <rect y="50" x="25" width="15" height="15"></rect>
-                            <rect y="50" x="50" width="15" height="15"></rect>
+                        <svg id="gridSVG" viewBox="0 0 50 50" width="25" height="25">
+                            <rect width="12" height="12"></rect>
+                            <rect x="19" width="12" height="12"></rect>
+                            <rect x="38" width="12" height="12"></rect>
+                            <rect y="19" width="12" height="12"></rect>
+                            <rect y="19" x="19" width="12" height="12"></rect>
+                            <rect y="19" x="38" width="12" height="12"></rect>
+                            <rect y="38" width="12" height="12"></rect>
+                            <rect y="38" x="19" width="12" height="12"></rect>
+                            <rect y="38" x="39" width="12" height="12"></rect>
                         </svg>
                     </button>
                     <button id="columnLayoutButton">
-                        <svg id="hamburgerSVG" viewBox="0 0 65 65" width="32.5" height="32.5">
-                            <rect width="65" height="15"></rect>
-                            <rect y="25" width="65" height="15"></rect>
-                            <rect y="50" width="65" height="15"></rect>
+                        <svg id="hamburgerSVG" viewBox="0 0 50 50" width="25" height="25">
+                            <rect width="50" height="12"></rect>
+                            <rect y="19" width="50" height="12"></rect>
+                            <rect y="38" width="50" height="12"></rect>
                         </svg>
                     </button>
                 </div>
             </div>
             <div id="mainGridDivDesktop">
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/nicki-minaj.png" alt="Nicki Minaj">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/nicki-minaj.png" alt="Nicki Minaj">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>JULY 25, 2015</p>
+                        <p class="date">JULY 25, 2015</p>
                         <p class="dayOfWeek">FRIDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -97,9 +106,14 @@
                     </div>
                 </div>
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/nick-jonas.png" alt="Nick Jonas">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/nick-jonas.png" alt="Nick Jonas">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>JULY 30, 2015</p>
+                        <p class="date">JULY 30, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -108,9 +122,14 @@
                     </div>
                 </div>
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/taylor-swift.png" alt="Taylor Swift">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/taylor-swift.png" alt="Taylor Swift">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>August 06, 2015</p>
+                        <p class="date">AUGUST 06, 2015</p>
                         <p class="dayOfWeek">THURSDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -119,9 +138,14 @@
                     </div>
                 </div>
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/sam-smith.png" alt="Sam Smith">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/sam-smith.png" alt="Sam Smith">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>August 15, 2015</p>
+                        <p class="date">AUGUST 15, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -130,9 +154,14 @@
                     </div>
                 </div>
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/iggy-azalea.png" alt="Iggy Azalea">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/iggy-azalea.png" alt="Iggy Azalea">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>August 22, 2015</p>
+                        <p class="date">AUGUST 22, 2015</p>
                         <p class="dayOfWeek">FRIDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -141,9 +170,14 @@
                     </div>
                 </div>
                 <div class="eventCardDiv">
-                    <img class="artistImage" src="./images/brandon-flowers.png" alt="Brandon Flowers">
+                    <div class="imageDiv">
+                        <img class="artistImage" src="./images/brandon-flowers.png" alt="Brandon Flowers">
+                        <div class="imageOverlay">
+                            <button class="buyTicketsButton">BUY TICKETS</button>
+                        </div>
+                    </div>
                     <div class="dateDiv">
-                        <p>August 30, 2015</p>
+                        <p class="date">AUGUST 30, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="infoDiv">
@@ -162,7 +196,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>July 25, 2015</p>
+                        <p class="date">JULY 25, 2015</p>
                         <p class="dayOfWeek">FRIDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -179,7 +213,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>July 30, 2015</p>
+                        <p class="date">JULY 30, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -196,7 +230,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>August 06, 2015</p>
+                        <p class="date">AUGUST 06, 2015</p>
                         <p class="dayOfWeek">THURSDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -213,7 +247,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>August 15, 2015</p>
+                        <p class="date">AUGUST 15, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -230,7 +264,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>August 22, 2015</p>
+                        <p class="date">AUGUST 22, 2015</p>
                         <p class="dayOfWeek">FRIDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -247,7 +281,7 @@
                         </div>
                     </div>
                     <div class="dateDiv">
-                        <p>August 30, 2015</p>
+                        <p class="date">AUGUST 30, 2015</p>
                         <p class="dayOfWeek">SATURDAY</p>
                     </div>
                     <div class="buyTicketsDiv">
@@ -271,15 +305,15 @@
                     <p class="subText">Stay Connected Wherever You Are!</p>
                 </div>
                 <div id="socialTabs">
-                    <button class="socialTab">
+                    <button class="socialTab active" id="twitterTab">
                         <i class="fa-brands fa-twitter"></i>
                         TWITTER
                     </button>
-                    <button class="socialTab">
+                    <button class="socialTab" id="instagramTab">
                         <i class="fa-brands fa-instagram"></i>
                         INSTAGRAM
                     </button>
-                    <button class="socialTab">
+                    <button class="socialTab" id="facebookTab">
                         <i class="fa-brands fa-facebook-f"></i>
                         FACEBOOK
                     </button>
@@ -342,6 +376,145 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-twitter"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: .@dylangardner23 </span>will be opening for 'The Walking Dead's' <span>@emmykinney </span>on her tour! <span>bit.ly/1GppUEs pic.twitter.com/bgnkAEIB5O</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">8:14 PM / 3 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="socialPostsList" id="instagramPostsList">
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: </span>Tickets for <span>@maroon5 </span>open for pre-sale Friday at <span>10 AM EST. </span>Sign up now for a presale code at this link <span>linktr.ee/maroon5tour</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">5:45PM / 28 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: </span>Tickets for <span>@maroon5 </span>open for pre-sale Friday at <span>10 AM EST. </span>Sign up now for a presale code at this link <span>linktr.ee/maroon5tour</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">5:45PM / 28 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: </span>Tickets for <span>@maroon5 </span>open for pre-sale Friday at <span>10 AM EST. </span>Sign up now for a presale code at this link <span>linktr.ee/maroon5tour</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">5:45PM / 28 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-instagram"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: </span>Tickets for <span>@maroon5 </span>open for pre-sale Friday at <span>10 AM EST. </span>Sign up now for a presale code at this link <span>linktr.ee/maroon5tour</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">5:45PM / 28 APR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="socialPostsList" id="facebookPostsList">
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: @edhq </span>performed 'Thinking Out Loud' last night at <span>CH Venue. </span>Check it out! <span>bit.ly/1GppUEs pic.facebook.com/jkhdHKO67I</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">12:15AM / 25 MAR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: @edhq </span>performed 'Thinking Out Loud' last night at <span>CH Venue. </span>Check it out! <span>bit.ly/1GppUEs pic.facebook.com/jkhdHKO67I</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">12:15AM / 25 MAR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: @edhq </span>performed 'Thinking Out Loud' last night at <span>CH Venue. </span>Check it out! <span>bit.ly/1GppUEs pic.facebook.com/jkhdHKO67I</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">12:15AM / 25 MAR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socialPost">
+                            <div class="logoAndHandle">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <p class="handle">@CHVENUE</p>
+                            </div>
+                            <p class="postText"><span>@axs: @edhq </span>performed 'Thinking Out Loud' last night at <span>CH Venue. </span>Check it out! <span>bit.ly/1GppUEs pic.facebook.com/jkhdHKO67I</span></p>
+                            <div class="bottomBar">
+                                <p class="dateTime">12:15AM / 25 MAR 2015</p>
+                                <div class="actionLinks">
+                                    <i class="fa-solid fa-retweet"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -352,10 +525,15 @@
                 </div>
                 <div id="addressDiv">
                     <p class="boldText">ADDRESS:</p>
-                    <p class="addressText">5727 Westpark Drive. Suite 108, Charlotte, NC 28217</p>
+                    <p class="addressText">5727 Westpark Drive, Suite 108, Charlotte, NC 28217</p>
                 </div>
                 <div id="mapDiv"></div>
-                <div id="content">Hello world!</div>
+                <div id="content">
+                    <p class="bold">CH VENUE</p>
+                    <p>5727 Westpark Drive</p>
+                    <p>Suite 108</p>
+                    <p>Charlotte, NC 28217</p>
+                </div>
             </div>
         </div>
     </body>

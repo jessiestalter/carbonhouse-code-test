@@ -21,14 +21,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px; 
+        gap: 15px; 
 
         button {
             background-color: rgba(0,0,0,0);
             border: none;
             fill: $default-black;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
 
             svg {
@@ -56,6 +56,46 @@
         display: flex;
         flex-direction: column;
         transition: box-shadow .2s linear;
+        .imageDiv {
+            position: relative;
+
+            .artistImage {
+                width: 100%;
+                height: 100%;
+            }
+
+            .imageOverlay {
+                // background-color: rgba(0,0,0,0.7);
+                background-color: rgba(0,0,0,0);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: background-color 0.2s linear;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .buyTicketsButton {
+                    opacity: 0;
+                    background-color: $chvenue-pink;
+                    color: $default-white;
+                    border: none;
+                    padding: 10px 50px;
+                    font-family: $oswald-font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: opacity 0.2s linear;
+                }
+
+                .buyTicketsButton:hover {
+                    color: $default-black;
+                    background-color: $default-white;
+                }
+            }
+        }
 
         .infoDiv {
             background-color: $default-white;
@@ -71,6 +111,7 @@
                 font-family: $oswald-font-family;
                 font-weight: 400;
                 font-size: 24px;
+                letter-spacing: 1.2px;
                 cursor: pointer;
             }
             
@@ -78,8 +119,18 @@
                 margin: 0;
                 font-style: italic;
                 font-family: $merriweather-font-family;
-                font-size: 14px;
+                font-size: 15px;
                 padding-bottom: 10px;
+            }
+        }
+    }
+
+    .eventCardDiv:hover {
+        .imageDiv .imageOverlay {
+            background-color: rgba(0,0,0,0.7);
+
+            .buyTicketsButton{
+                opacity: 1;
             }
         }
     }
@@ -89,6 +140,8 @@
     display: none;
     width: 100%;
     padding-top: 25px;
+    flex-direction: column;
+    gap: 20px;
 
     .eventCardDiv {
         display: flex;
@@ -134,10 +187,28 @@
             gap: 20px;
             background-color: $chvenue-pink;
             height: 45px;
+            cursor: pointer;
 
             .buyTicketsText {
                 color: $default-white;
                 font-family: $oswald-font-family;
+            }
+        }
+    }
+}
+
+#mainGridDivMobile.onDesktop {
+    .eventCardDiv .infoDiv {
+        .artistInfoTextDiv {
+            padding-top: 5%;
+            padding-left: 5%;
+
+            .artistName {
+                font-size: 36px;
+            }
+
+            .tourName {
+                font-size: 24px;
             }
         }
     }
@@ -153,12 +224,14 @@
     background-color: $default-black;
     height: 36px;
 
-    p {
+    .date, .dayOfWeek {
         margin: 0;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $chvenue-pink;
         font-family: $oswald-font-family;
-        font-size: 14px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+        font-weight: 500;
     }
 
     .dayOfWeek {
@@ -181,16 +254,6 @@
         #layoutButtons {
             display: none;
         }
-    }
-
-    #mainGridDivDesktop {
-        display: none;
-    }
-
-    #mainGridDivMobile {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
     }
 }
 

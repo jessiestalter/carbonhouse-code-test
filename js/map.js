@@ -1,13 +1,14 @@
+/* map.js */
+/* Creates a map using Google Maps API with a custom marker & popup */
+
 let chVenuePosition, charlotteCenterPosition, marker, map, popup, Popup;
 
-/** Initializes the map and the custom popup. */
 function myMap() {
-
     chVenuePosition = { lat: 35.1585135, lng: -80.8884074 };
-    charlotteCenterPosition = { lat: 35.2270869, lng: -80.8431267 };
+    mapCenterPosition = { lat: 35.17, lng: -80.84 };
 
     map = new google.maps.Map(document.getElementById("mapDiv"), {
-        center: chVenuePosition,
+        center: mapCenterPosition,
         zoom: 11,
     });
 
@@ -17,16 +18,17 @@ function myMap() {
         constructor(position, content) {
             super();
             this.position = position;
-            content.classList.add("popup-bubble");
+            content.classList.add("popup");
             content.style.display = "none";
             
             const bubbleAnchor = document.createElement("div");
             
-            bubbleAnchor.classList.add("popup-bubble-anchor");
+            bubbleAnchor.classList.add("popupAnchor");
+            bubbleAnchor.style.display = 'none';
             bubbleAnchor.appendChild(content);
 
             this.containerDiv = document.createElement("div");
-            this.containerDiv.classList.add("popup-container");
+            this.containerDiv.classList.add("popupContainer");
             this.containerDiv.appendChild(bubbleAnchor);
             
             Popup.preventMapHitsAndGesturesFrom(this.containerDiv);
@@ -53,8 +55,8 @@ function myMap() {
                 : "none";
 
             if (display === "block") {
-              this.containerDiv.style.left = divPosition.x + "px";
-              this.containerDiv.style.top = divPosition.y + "px";
+              this.containerDiv.style.left = divPosition.x + 20 + "px";
+              this.containerDiv.style.top = divPosition.y - 31 + "px";
             }
 
             if (this.containerDiv.style.display !== display) {
@@ -64,10 +66,12 @@ function myMap() {
 
         open() {
             content.style.display = "block";
+            $('.popupAnchor').css('display', 'block');
         }
 
         close() {
             content.style.display = "none";
+            $('.popupAnchor').css('display', 'none');
         }
     }
 
