@@ -164,7 +164,7 @@
         }
     }
 
-    .hamburgerButton {
+    #hamburgerButton {
         background: rgba(0,0,0,0);
         color: $default-white;
         border: none;
@@ -219,7 +219,7 @@
             display: none;
         }
     
-        .hamburgerButton {
+        #hamburgerButton {
             display: block;
         }
     }

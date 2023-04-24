@@ -282,6 +282,7 @@
     display: none;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 850px) {
     #socialAndDirectionsContainer {
         flex-direction: column;
@@ -320,20 +321,3 @@
         }
     }
 }
-
-// @media (max-width: 374px) {
-//     #socialAndDirectionsContainer {
-//         .mainDiv {
-//             .headingTextDiv {
-//                 .headingText {
-//                     font-size: 16px;
-//                 }
-    
-//                 .subText {
-//                     margin-top: 0;
-//                     font-size: 11px;
-//                 }
-//             }
-//         }
-//     }
-// }

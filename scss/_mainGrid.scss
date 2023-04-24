@@ -65,7 +65,6 @@
             }
 
             .imageOverlay {
-                // background-color: rgba(0,0,0,0.7);
                 background-color: rgba(0,0,0,0);
                 position: absolute;
                 top: 0;
@@ -244,6 +243,7 @@
     }
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 767px) {
     #upcomingEventsDiv {
         justify-content: center;

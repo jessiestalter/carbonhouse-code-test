@@ -150,7 +150,7 @@
 #lowerNavBar .navLinks .navLink a:focus {
   color: #de53f3;
 }
-#lowerNavBar .hamburgerButton {
+#lowerNavBar #hamburgerButton {
   background: rgba(0, 0, 0, 0);
   color: #FFFFFF;
   border: none;
@@ -192,7 +192,7 @@
   #lowerNavBar .navLinks {
     display: none;
   }
-  #lowerNavBar .hamburgerButton {
+  #lowerNavBar #hamburgerButton {
     display: block;
   }
 }
@@ -408,6 +408,7 @@
   z-index: 1;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 767px) {
   #upcomingEventsDiv {
     justify-content: center;
@@ -489,6 +490,7 @@
   color: rgb(0, 0, 0);
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 650px) {
   #newsletterSignupContainer {
     height: 400px;
@@ -747,6 +749,7 @@
   display: none;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 850px) {
   #socialAndDirectionsContainer {
     flex-direction: column;

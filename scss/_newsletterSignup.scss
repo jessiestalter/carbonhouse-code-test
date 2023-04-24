@@ -37,8 +37,6 @@
             font-style: italic;
             font-size: 18px;
             text-align: center;
-            // margin-top: 5px;
-            // padding: 5px;
         }
 
         #getConnectedButton {
@@ -60,6 +58,7 @@
     }
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 650px) {
     #newsletterSignupContainer {
         height: 400px;
