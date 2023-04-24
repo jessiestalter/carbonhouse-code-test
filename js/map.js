@@ -1,11 +1,16 @@
 /* map.js */
 /* Creates a map using Google Maps API with a custom marker & popup */
-
 let chVenuePosition, charlotteCenterPosition, marker, map, popup, Popup;
 
 function myMap() {
-    chVenuePosition = { lat: 35.1585135, lng: -80.8884074 };
-    mapCenterPosition = { lat: 35.17, lng: -80.84 };
+    chVenuePosition = {
+        lat: 35.1585135,
+        lng: -80.8884074
+    };
+    mapCenterPosition = {
+        lat: 35.17,
+        lng: -80.84
+    };
 
     map = new google.maps.Map(document.getElementById("mapDiv"), {
         center: mapCenterPosition,
@@ -20,9 +25,9 @@ function myMap() {
             this.position = position;
             content.classList.add("popup");
             content.style.display = "none";
-            
+
             const bubbleAnchor = document.createElement("div");
-            
+
             bubbleAnchor.classList.add("popupAnchor");
             bubbleAnchor.style.display = 'none';
             bubbleAnchor.appendChild(content);
@@ -30,37 +35,37 @@ function myMap() {
             this.containerDiv = document.createElement("div");
             this.containerDiv.classList.add("popupContainer");
             this.containerDiv.appendChild(bubbleAnchor);
-            
+
             Popup.preventMapHitsAndGesturesFrom(this.containerDiv);
         }
-        
+
         onAdd() {
-          this.getPanes().floatPane.appendChild(this.containerDiv);
+            this.getPanes().floatPane.appendChild(this.containerDiv);
         }
-        
+
         onRemove() {
-          if (this.containerDiv.parentElement) {
-            this.containerDiv.parentElement.removeChild(this.containerDiv);
-          }
+            if (this.containerDiv.parentElement) {
+                this.containerDiv.parentElement.removeChild(this.containerDiv);
+            }
         }
-        
+
         draw() {
             const divPosition = this.getProjection().fromLatLngToDivPixel(
-              this.position
+                this.position
             );
-            
+
             const display =
-              Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000
-                ? "block"
-                : "none";
+                Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
+                "block" :
+                "none";
 
             if (display === "block") {
-              this.containerDiv.style.left = divPosition.x + 20 + "px";
-              this.containerDiv.style.top = divPosition.y - 31 + "px";
+                this.containerDiv.style.left = divPosition.x + 20 + "px";
+                this.containerDiv.style.top = divPosition.y - 31 + "px";
             }
 
             if (this.containerDiv.style.display !== display) {
-              this.containerDiv.style.display = display;
+                this.containerDiv.style.display = display;
             }
         }
 

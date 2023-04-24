@@ -8,33 +8,23 @@ let mainGridDivDesktop = $('#mainGridDivDesktop');
 let mainGridDivMobile = $('#mainGridDivMobile');
 
 gridLayoutButton.click(function() {
-    if (!gridLayoutButton.hasClass('selected')) {
-        gridLayoutButton.addClass('selected');
-    }
-    if (columnLayoutButton.hasClass('selected')) {
-        columnLayoutButton.removeClass('selected');
-    }
+    gridLayoutButton.addClass('selected');
+    columnLayoutButton.removeClass('selected');
 
     mainGridDivDesktop.css('display', 'flex');
     mainGridDivMobile.css('display', 'none');
 
-    if (mainGridDivMobile.hasClass('onDesktop')) {
-        mainGridDivMobile.removeClass('onDesktop');
-    }
+    mainGridDivMobile.removeClass('onDesktop');
 });
 
 columnLayoutButton.click(function() {
-    if (gridLayoutButton.hasClass('selected')) {
-        gridLayoutButton.removeClass('selected');
-    }
-    if (!columnLayoutButton.hasClass('selected')) {
-        columnLayoutButton.addClass('selected');
-    }
+    gridLayoutButton.removeClass('selected');
+    columnLayoutButton.addClass('selected');
 
     mainGridDivDesktop.css('display', 'none');
     mainGridDivMobile.css('display', 'flex');
     
-    if (!mainGridDivMobile.hasClass('onDesktop') && window.innerWidth >= 767) {
+    if (window.innerWidth >= 767) {
         mainGridDivMobile.addClass('onDesktop');
     }
 });

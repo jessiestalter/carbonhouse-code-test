@@ -120,6 +120,7 @@
                 height: 100%;
                 gap: 10px;
                 overflow-x: scroll;
+                scrollbar-width: none;
 
                 .socialPost {
                     display: flex;
